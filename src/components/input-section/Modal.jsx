@@ -1,13 +1,12 @@
 import { AnimatePresence } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
-import { questions } from '../config/questions'
 import { useSelector } from 'react-redux'
 import Spinner from './Spinner'
 import AllQuestions from './AllQuestions'
 import VerifyStep from './VerifyStep'
-import ResultPage from './ResultPage'
-import CalorieResultPage from './CalorieResultPage'
-import WeightResultPage from './WeightResultPage'
+import ResultPage from './result-pages/ResultPage'
+import CalorieResultPage from './result-pages/CalorieResultPage'
+import WeightResultPage from './result-pages/WeightResultPage'
 
 const Modal = ({ questions }) => {
   // Utility Definitions

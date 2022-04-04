@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { changeInput, changeOption } from '../redux/formDataSlice'
+import { changeInput, changeOption } from '../../redux/formDataSlice'
 
 const Input = ({
   inputName,

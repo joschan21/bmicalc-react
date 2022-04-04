@@ -1,13 +1,13 @@
-import getStepAnimationProps from '../utils/animationDirection'
+import getStepAnimationProps from '../../utils/animationDirection'
 import { motion } from 'framer-motion'
 import Input from './Input'
-import isValidInput from '../utils/isValidInput'
+import isValidInput from '../../utils/isValidInput'
 import Select from './Select'
 
 // API Call Imports
-import bmiRequest from '../utils/bmiRequest'
-import dailyCalorieRequest from '../utils/dailyCalorieRequest'
-import idealWeightRequest from '../utils/idealWeightRequest'
+import bmiRequest from '../../api/bmiRequest'
+import dailyCalorieRequest from '../../api/dailyCalorieRequest'
+import idealWeightRequest from '../../api/idealWeightRequest'
 
 const VerifyStep = ({ motionDirection, form, setCurrentQuestion, questions, activeNav }) => {
   const possibleActions = [bmiRequest, dailyCalorieRequest, idealWeightRequest]

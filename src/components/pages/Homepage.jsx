@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from './Navbar'
-import TopBar from './TopBar'
-import MobileLayout from './MobileLayout'
-import DesktopLayout from './DesktopLayout'
+import Navbar from '../Navbar'
+import TopBar from '../TopBar'
+import MobileLayout from '../MobileLayout'
+import DesktopLayout from '../DesktopLayout'
 import { useSelector } from 'react-redux'
-import { headerData, bmiQuestions } from '../config/bmiData'
+import { headerData, bmiQuestions } from '../../config/bmiData'
 import { AnimatePresence } from 'framer-motion'
 
 const Homepage = () => {

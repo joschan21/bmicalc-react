@@ -1,9 +1,9 @@
 /* This example requires Tailwind CSS v2.0+ */
-import Modal from './Modal'
+import Modal from './input-section/Modal'
 import Footer from './Footer'
 import Faq from './Faq'
 import Header from './Header'
-import ErrorPage from './ErrorPage'
+import ErrorPage from './input-section/ErrorPage'
 import { useSelector } from 'react-redux'
 
 export default function DesktopLayout({ title, description, questions }) {

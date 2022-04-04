@@ -13,7 +13,7 @@ export default function ProgressCircles({ currentIndex, motionDirection, questio
 
   useEffect(() => {
     if(currentIndex === 0) {
-      list.map((listItem, index) => {
+      list.forEach((listItem, index) => {
         if(index !== 0) {
           listItem.status = 'upcoming'
         }
@@ -29,7 +29,7 @@ export default function ProgressCircles({ currentIndex, motionDirection, questio
       list[currentIndex].status = 'current'
       if (currentIndex > 0) list[currentIndex - 1].status = 'complete'
     }
-  }, [currentIndex])
+  }, [currentIndex, list, motionDirection])
 
   function getProps() {
     if (motionDirection.current > 0) {
@@ -62,7 +62,7 @@ export default function ProgressCircles({ currentIndex, motionDirection, questio
 
   return (
     <nav aria-label='Progress'>
-      <ol role='list' className='flex items-center'>
+      <ol className='flex items-center'>
         {list.map((step, stepIdx) => (
           <li
             key={step.inputName}
@@ -89,12 +89,11 @@ export default function ProgressCircles({ currentIndex, motionDirection, questio
                     <div className='h-0.5 absolute w-full bg-indigo-600' />
                   </div>
                 )}
-                <a
-                  href='#'
+                <div
                   className='relative w-8 h-8 flex items-center justify-center bg-indigo-600 rounded-full hover:bg-indigo-900'>
                   <HiOutlineCheck className='w-5 h-5 text-white' aria-hidden='true' />
                   <span className='sr-only'>{step.name}</span>
-                </a>
+                </div>
               </>
             ) : step.status === 'current' ? (
               <>
@@ -110,36 +109,33 @@ export default function ProgressCircles({ currentIndex, motionDirection, questio
                   <div className='h-0.5 w-full bg-gray-200' />
                 </div>
 
-                <motion.a
+                <motion.div
                   {...getProps()}
-                  href='#'
                   className='relative z-10 translate-y-1/2 w-8 h-8 flex items-center justify-center bg-white border-2 border-indigo-600 rounded-full'
                   aria-current='step'>
                   <span className='h-2.5 w-2.5 bg-indigo-600 rounded-full' aria-hidden='true' />
                   <span className='sr-only'>{step.name}</span>
-                </motion.a>
-                <a
-                  href='#'
+                </motion.div>
+                <div
                   className='relative -translate-y-1/2 w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-200 rounded-full'
                   aria-current='step'>
                   <span className='h-2.5 w-2.5 bg-gray-200 rounded-full' aria-hidden='true' />
                   <span className='sr-only'>{step.name}</span>
-                </a>
+                </div>
               </>
             ) : (
               <>
                 <div className='absolute inset-0 flex items-center' aria-hidden='true'>
                   <div className='h-0.5 w-full bg-gray-200' />
                 </div>
-                <a
-                  href='#'
+                <div
                   className='group relative w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-300 rounded-full hover:border-gray-400'>
                   <span
                     className='h-2.5 w-2.5 bg-transparent rounded-full group-hover:bg-gray-300'
                     aria-hidden='true'
                   />
                   <span className='sr-only'>{step.name}</span>
-                </a>
+                </div>
               </>
             )}
           </li>

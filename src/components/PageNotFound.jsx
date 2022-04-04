@@ -9,7 +9,7 @@ const PageNotFound = () => {
       <main className='flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex-shrink-0 flex justify-center'>
           <a href='/' className='inline-flex'>
-            <span className='sr-only'>Workflow</span>
+            <span className='sr-only'>BMI Calculator</span>
             <img
               className='h-12 w-auto'
               src={process.env.PUBLIC_URL + '/logo-without-text.png'}
@@ -27,7 +27,7 @@ const PageNotFound = () => {
               Sorry, we couldn’t find the page you’re looking for.
             </p>
             <div className='mt-6'>
-              <a href='#' className='text-base font-medium text-indigo-600 hover:text-indigo-500'>
+              <a href='/' className='text-base font-medium text-indigo-600 hover:text-indigo-500'>
                 Go back home<span aria-hidden='true'> &rarr;</span>
               </a>
             </div>

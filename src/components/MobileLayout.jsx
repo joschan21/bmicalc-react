@@ -12,7 +12,7 @@ const MobileLayout = () => {
         <div className='absolute top-[64px] bottom-0 left-0 right-0 flex items-center justify-center'>
           <iframe
             className='h-[620px] w-[358px] emulator__item shadow-2xl'
-            src='http://localhost:3000/copy'
+            src='https://bmicalc-react.herokuapp.com/'
           />
         </div>
       </motion.div>

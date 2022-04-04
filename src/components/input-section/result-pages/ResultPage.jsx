@@ -1,9 +1,9 @@
 import { HiArrowSmLeft } from 'react-icons/hi'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { clearInput } from '../redux/formDataSlice'
-import Speedometer from './Speedometer'
-import ErrorPage from './ErrorPage'
+import { clearInput } from '../../../redux/formDataSlice'
+import Speedometer from '../Speedometer'
+import ErrorPage from '../ErrorPage'
 
 const ResultPage = ({ moveTo }) => {
   const dispatch = useDispatch()

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { clearInput } from '../redux/formDataSlice'
+import { clearInput } from '../../../redux/formDataSlice'
 import { HiArrowSmLeft, HiQuestionMarkCircle } from 'react-icons/hi'
 import ReactTooltip from 'react-tooltip'
 

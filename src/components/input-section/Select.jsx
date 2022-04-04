@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { changeOption } from '../redux/formDataSlice'
+import { changeOption } from '../../redux/formDataSlice'
 
 const Select = ({ inputName, currentQuestion, currentLabel, currentIndex }) => {
   // Utility Definitions

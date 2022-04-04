@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion'
 import ControlButton from './ControlButton'
-import getStepAnimationProps from '../utils/animationDirection'
-import capitalizeFirstLetter from '../utils/capitalizeFirstLetter'
+import getStepAnimationProps from '../../utils/animationDirection'
 import Input from './Input'
-import isValidInput from '../utils/isValidInput'
+import isValidInput from '../../utils/isValidInput'
 import ProgressCircles from './ProgressCircles'
 import Select from './Select'
 

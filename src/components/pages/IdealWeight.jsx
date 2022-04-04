@@ -1,11 +1,11 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import DesktopLayout from "./DesktopLayout"
-import MobileLayout from './MobileLayout'
-import Navbar from './Navbar'
-import TopBar from './TopBar'
-import { changeNav } from '../redux/NavbarSlice'
-import {headerData, idealWeightQuestions} from "../config/idealWeightData"
+import DesktopLayout from "../DesktopLayout"
+import MobileLayout from '../MobileLayout'
+import Navbar from '../Navbar'
+import TopBar from '../TopBar'
+import { changeNav } from '../../redux/NavbarSlice'
+import {headerData, idealWeightQuestions} from "../../config/idealWeightData"
 
 const DailyCalories = () => {
   const dispatch = useDispatch()

@@ -10,6 +10,7 @@ html {
   color-scheme: dark;
 }
 
+/* Custom Style for Speedometer font */
 .segment-value {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
@@ -18,6 +19,7 @@ html {
   font-weight: 400 !important;
 }
 
+/* Chrome Autofill Styles */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
