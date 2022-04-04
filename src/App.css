@@ -1,0 +1,10 @@
+.emulator__item {
+    border-radius: 15px;
+    border: 10px solid #333333;
+    box-sizing: content-box;
+    border-top: 80px solid #333333;
+    border-bottom: 80px solid #333333;
+    overflow-x: hidden;
+    transform-origin: left bottom;
+    will-change: transform;
+  }
