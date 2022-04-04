@@ -10,7 +10,7 @@ const TopBar = () => {
   const isMobile = useSelector((state) => state.responsive.mobileView)
 
   return (
-    <div className='flex overflow-hidden relative justify-between items-center py-2 px-6 h-16 w-full bg-gray-900/80 backdrop-blur-lg shadow-md text-white'>
+    <div className='flex overflow-hidden relative justify-between items-center py-2 px-6 h-16 w-full bg-gray-900/80 backdrop-blur-md shadow-md text-white'>
       <svg
         className='absolute pointer-events-none opacity-50 top-0'
         aria-hidden='true'

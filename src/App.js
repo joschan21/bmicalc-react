@@ -4,6 +4,7 @@ import Homepage from './components/Homepage'
 import HomepageCopy from './components/HomepageCopy'
 import DailyCalories from './components/DailyCalories'
 import IdealWeight from './components/IdealWeight'
+import PageNotFound from './components/PageNotFound'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/daily-calories' element={<DailyCalories />} />
         <Route path='/ideal-weight' element={<IdealWeight />} />
         <Route path='/copy' element={<HomepageCopy />} />
+        <Route path='*' element={<PageNotFound />} />
       </Routes>
     </Router>
   )
