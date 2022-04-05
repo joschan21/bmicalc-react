@@ -21,8 +21,8 @@ export default function DesktopLayout({ title, description, questions }) {
               <div className='flex-1' />
               <div className='flex-1 w-full bg-gray-800' />
             </div>
-            <motion.div animate={{opacity: [0, 1]}} className='relative max-w-7xl mx-auto px-4 sm:px-6'>
-              <div className='absolute z-10 top-0 right-0 -translate-y-1/2 w-32 h-32'>
+            <div className='relative max-w-7xl mx-auto px-4 sm:px-6'>
+              <div className='absolute z-10 top-0 right-0 -translate-x-1/2 -translate-y-1/2 w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32'>
                 <motion.img
                   animate={{ opacity: [0, 1], rotate: [0, 15] }}
                   src={process.env.PUBLIC_URL + '/apple.svg'}
@@ -31,7 +31,7 @@ export default function DesktopLayout({ title, description, questions }) {
               <div className='relative overflow-hidden rounded-lg px-2 shadow-lg bg-white py-12 border-gray-100 border-[12px] max-w-full'>
                 {!error ? <Modal questions={questions} /> : <ErrorPage />}
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
         <Faq />
