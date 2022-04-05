@@ -1,18 +1,20 @@
+import { motion } from "framer-motion"
+
 const Faq = () => {
   return (
     <div className='bg-gray-800'>
       <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8'>
         <div className='lg:grid lg:grid-cols-3 lg:gap-8'>
-          <div>
+          <motion.div whileInView={{opacity: [0, 1], y: [20, 0]}}>
             <h2 className='text-3xl font-extrabold text-white'>Frequently asked questions</h2>
             <p className='mt-4 text-lg text-gray-400'>
               A collection of frequently asked questions regarding the calculation and meaning of
               the Body Mass Index or BMI for short.
             </p>
-          </div>
+          </motion.div>
           <div className='mt-12 lg:mt-0 lg:col-span-2'>
-            <dl className='space-y-12'>
-              <div>
+            <motion.dl className='space-y-12'>
+              <motion.div viewport={{once: true}} transition={{delay: 0.1}} whileInView={{opacity: [0, 1], y: [20, 0]}}>
                 <dt className='text-lg leading-6 font-medium text-white'>
                   What does the BMI mean?
                 </dt>
@@ -20,8 +22,8 @@ const Faq = () => {
                   The BMI or Body Mass Index is the relation between your height and your weight. It
                   describes whether your weight is in the normal range for your height.{' '}
                 </dd>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div viewport={{once: true}} transition={{delay: 0.2}} whileInView={{opacity: [0, 1], y: [20, 0]}}>
                 <dt className='text-lg leading-6 font-medium text-white'>
                   What BMI categories are there?
                 </dt>
@@ -36,8 +38,8 @@ const Faq = () => {
                     <li>Obesity Class III (BMI of 40 and above)</li>
                   </ul>
                 </dd>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div viewport={{once: true}} transition={{delay: 0.3}} whileInView={{opacity: [0, 1], y: [20, 0]}}>
                 <dt className='text-lg leading-6 font-medium text-white'>
                   If the BMI requires the height and weight, why is the age relevant?
                 </dt>
@@ -47,8 +49,8 @@ const Faq = () => {
                   with age. This correlation derives from a table published by the National Research
                   Council in 1989.
                 </dd>
-              </div>
-            </dl>
+              </motion.div>
+            </motion.dl>
           </div>
         </div>
       </div>

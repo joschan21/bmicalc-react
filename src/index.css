@@ -30,3 +30,11 @@ input:-webkit-autofill:active {
 input:-webkit-autofill {
   -webkit-text-fill-color: black !important;
 }
+
+#apple-svg {
+  overflow: visible;
+  stroke: #000;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}

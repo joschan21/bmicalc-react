@@ -1,13 +1,15 @@
-/* This example requires Tailwind CSS v2.0+ */
 import Modal from './input-section/Modal'
 import Footer from './Footer'
 import Faq from './Faq'
 import Header from './Header'
 import ErrorPage from './input-section/ErrorPage'
 import { useSelector } from 'react-redux'
+import { motion } from 'framer-motion'
 
 export default function DesktopLayout({ title, description, questions }) {
   const error = useSelector((state) => state.error.apiError)
+
+  const transition = { duration: 4, yoyo: Infinity, ease: 'easeInOut' }
 
   return (
     <>
@@ -19,16 +21,17 @@ export default function DesktopLayout({ title, description, questions }) {
               <div className='flex-1' />
               <div className='flex-1 w-full bg-gray-800' />
             </div>
-            <div className='relative max-w-7xl mx-auto px-4 sm:px-6'>
-              <img
-                className='absolute saturate-[0.75] top-0 -translate-y-full right-0 hidden lg:block w-3/5 lg:w-2/5'
-                src={process.env.PUBLIC_URL + '/bmi-illustration.png'}
-                alt='bmi illustration'
-              />
+            <motion.div animate={{opacity: [0, 1]}} className='relative max-w-7xl mx-auto px-4 sm:px-6'>
+              <div className='absolute z-10 top-0 right-0 -translate-y-1/2 w-32 h-32'>
+                <motion.img
+                  animate={{ opacity: [0, 1], rotate: [0, 15] }}
+                  src={process.env.PUBLIC_URL + '/apple.svg'}
+                />
+              </div>
               <div className='relative overflow-hidden rounded-lg px-2 shadow-lg bg-white py-12 border-gray-100 border-[12px] max-w-full'>
                 {!error ? <Modal questions={questions} /> : <ErrorPage />}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
         <Faq />
